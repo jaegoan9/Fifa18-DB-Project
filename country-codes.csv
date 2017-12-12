@@ -8,7 +8,7 @@ Andorra,Andorra la Vella,EU,Developed,AND,Southern Europe
 Angola,Luanda,AF,Developing,ANG,Sub-Saharan Africa
 Anguilla,The Valley,NA,Developing,AIA,Latin America and the Caribbean
 Antarctica,,AN,,ROS,
-Antigua and Barbuda,St. John's,NA,Developing,ATG,Latin America and the Caribbean
+Antigua & Barbuda,St. John's,NA,Developing,ATG,Latin America and the Caribbean
 Argentina,Buenos Aires,SA,Developing,ARG,Latin America and the Caribbean
 Armenia,Yerevan,AS,Developing,ARM,Western Asia
 Aruba,Oranjestad,NA,Developing,ARU,Latin America and the Caribbean
@@ -25,9 +25,9 @@ Belize,Belmopan,NA,Developing,BLZ,Latin America and the Caribbean
 Benin,Porto-Novo,AF,Developing,BEN,Sub-Saharan Africa
 Bermuda,Hamilton,NA,Developed,BER,Northern America
 Bhutan,Thimphu,AS,Developing,BHU,Southern Asia
-Bolivia (Plurinational State of),Sucre,SA,Developing,BOL,Latin America and the Caribbean
+Bolivia,Sucre,SA,Developing,BOL,Latin America and the Caribbean
 "Bonaire, Sint Eustatius and Saba",,NA,Developing,ANT,Latin America and the Caribbean
-Bosnia and Herzegovina,Sarajevo,EU,Developed,BIH,Southern Europe
+Bosnia Herzegovina,Sarajevo,EU,Developed,BIH,Southern Europe
 Botswana,Gaborone,AF,Developing,BOT,Sub-Saharan Africa
 Bouvet Island,,AN,Developing,,Latin America and the Caribbean
 Brazil,Brasilia,SA,Developing,BRA,Latin America and the Caribbean
@@ -37,16 +37,16 @@ Brunei Darussalam,Bandar Seri Begawan,AS,Developing,BRU,South-eastern Asia
 Bulgaria,Sofia,EU,Developed,BUL,Eastern Europe
 Burkina Faso,Ouagadougou,AF,Developing,BFA,Sub-Saharan Africa
 Burundi,Bujumbura,AF,Developing,BDI,Sub-Saharan Africa
-Cabo Verde,Praia,AF,Developing,CPV,Sub-Saharan Africa
+Cape Verde,Praia,AF,Developing,CPV,Sub-Saharan Africa
 Cambodia,Phnom Penh,AS,Developing,CAM,South-eastern Asia
 Cameroon,Yaounde,AF,Developing,CMR,Sub-Saharan Africa
 Canada,Ottawa,NA,Developed,CAN,Northern America
 Cayman Islands,George Town,NA,Developing,CAY,Latin America and the Caribbean
-Central African Republic,Bangui,AF,Developing,CTA,Sub-Saharan Africa
+Central African Rep.,Bangui,AF,Developing,CTA,Sub-Saharan Africa
 Chad,N'Djamena,AF,Developing,CHA,Sub-Saharan Africa
 Chile,Santiago,SA,Developing,CHI,Latin America and the Caribbean
-China,Beijing,AS,Developing,CHN,Eastern Asia
-"China, Hong Kong Special Administrative Region",Hong Kong,AS,Developing,HKG,Eastern Asia
+China PR,Beijing,AS,Developing,CHN,Eastern Asia
+Hong Kong,Hong Kong,AS,Developing,HKG,Eastern Asia
 "China, Macao Special Administrative Region",Macao,AS,Developing,MAC,Eastern Asia
 Christmas Island,Flying Fish Cove,AS,Developed,CXR,Australia and New Zealand
 Cocos (Keeling) Islands,West Island,AS,Developed,CCK,Australia and New Zealand
@@ -57,12 +57,12 @@ Cook Islands,Avarua,OC,Developing,COK,Polynesia
 Costa Rica,San Jose,NA,Developing,CRC,Latin America and the Caribbean
 Croatia,Zagreb,EU,Developed,CRO,Southern Europe
 Cuba,Havana,NA,Developing,CUB,Latin America and the Caribbean
-CuraÃ§ao, Willemstad,NA,Developing,,Latin America and the Caribbean
+Curacao, Willemstad,NA,Developing,,Latin America and the Caribbean
 Cyprus,Nicosia,EU,Developing,CYP,Western Asia
-Czechia,Prague,EU,Developed,CZE,Eastern Europe
-CÃ´te d'Ivoire,Yamoussoukro,AF,Developing,CIV,Sub-Saharan Africa
-Democratic People's Republic of Korea,Pyongyang,AS,Developing,PRK,Eastern Asia
-Democratic Republic of the Congo,Kinshasa,AF,Developing,COD,Sub-Saharan Africa
+Czech Republic,Prague,EU,Developed,CZE,Eastern Europe
+Ivory Coast,Yamoussoukro,AF,Developing,CIV,Sub-Saharan Africa
+Korea DPR,Pyongyang,AS,Developing,PRK,Eastern Asia
+DR Congo,Kinshasa,AF,Developing,COD,Sub-Saharan Africa
 Denmark,Copenhagen,EU,Developed,DEN,Northern Europe
 Djibouti,Djibouti,AF,Developing,DJI,Sub-Saharan Africa
 Dominica,Roseau,NA,Developing,DMA,Latin America and the Caribbean
@@ -96,7 +96,7 @@ Guam,Hagatna,OC,Developing,GUM,Micronesia
 Guatemala,Guatemala City,NA,Developing,GUA,Latin America and the Caribbean
 Guernsey,St Peter Port,EU,Developed,GBG,Northern Europe
 Guinea,Conakry,AF,Developing,GUI,Sub-Saharan Africa
-Guinea-Bissau,Bissau,AF,Developing,GNB,Sub-Saharan Africa
+Guinea Bissau,Bissau,AF,Developing,GNB,Sub-Saharan Africa
 Guyana,Georgetown,SA,Developing,GUY,Latin America and the Caribbean
 Haiti,Port-au-Prince,NA,Developing,HAI,Latin America and the Caribbean
 Heard Island and McDonald Islands,,AN,Developed,,Australia and New Zealand
@@ -106,9 +106,9 @@ Hungary,Budapest,EU,Developed,HUN,Eastern Europe
 Iceland,Reykjavik,EU,Developed,ISL,Northern Europe
 India,New Delhi,AS,Developing,IND,Southern Asia
 Indonesia,Jakarta,AS,Developing,IDN,South-eastern Asia
-Iran (Islamic Republic of),Tehran,AS,Developing,IRN,Southern Asia
+Iran,Tehran,AS,Developing,IRN,Southern Asia
 Iraq,Baghdad,AS,Developing,IRQ,Western Asia
-Ireland,Dublin,EU,Developed,IRL,Northern Europe
+Republic of Ireland,Dublin,EU,Developed,IRL,Northern Europe
 Isle of Man,Douglas,EU,Developed,GBM,Northern Europe
 Israel,Jerusalem,AS,Developing,ISR,Western Asia
 Italy,Rome,EU,Developed,ITA,Southern Europe
@@ -176,22 +176,22 @@ Poland,Warsaw,EU,Developed,POL,Eastern Europe
 Portugal,Lisbon,EU,Developed,POR,Southern Europe
 Puerto Rico,San Juan,NA,Developing,PUR,Latin America and the Caribbean
 Qatar,Doha,AS,Developing,QAT,Western Asia
-Republic of Korea,Seoul,AS,Developing,KOR,Eastern Asia
-Republic of Moldova,Chisinau,EU,Developed,MDA,Eastern Europe
+Korea Republic,Seoul,AS,Developing,KOR,Eastern Asia
+Moldova,Chisinau,EU,Developed,MDA,Eastern Europe
 Romania,Bucharest,EU,Developed,ROU,Eastern Europe
-Russian Federation,Moscow,EU,Developed,RUS,Eastern Europe
+Russia,Moscow,EU,Developed,RUS,Eastern Europe
 Rwanda,Kigali,AF,Developing,RWA,Sub-Saharan Africa
 RÃ©union,Saint-Denis,AF,Developing,REU,Sub-Saharan Africa
 Saint BarthÃ©lemy,Gustavia,NA,Developing,Â ,Latin America and the Caribbean
 Saint Helena,Jamestown,AF,Developing,SHN,Sub-Saharan Africa
-Saint Kitts and Nevis,Basseterre,NA,Developing,SKN,Latin America and the Caribbean
-Saint Lucia,Castries,NA,Developing,LCA,Latin America and the Caribbean
+St Kitts Nevis,Basseterre,NA,Developing,SKN,Latin America and the Caribbean
+St Lucia,Castries,NA,Developing,LCA,Latin America and the Caribbean
 Saint Martin (French Part),Marigot,NA,Developing,Â ,Latin America and the Caribbean
 Saint Pierre and Miquelon,Saint-Pierre,NA,Developed,SPM,Northern America
 Saint Vincent and the Grenadines,Kingstown,NA,Developing,VIN,Latin America and the Caribbean
 Samoa,Apia,OC,Developing,SAM,Polynesia
 San Marino,San Marino,EU,Developed,SMR,Southern Europe
-Sao Tome and Principe,Sao Tome,AF,Developing,STP,Sub-Saharan Africa
+SÃ£o TomÃ© & PrÃ_ncipe,Sao Tome,AF,Developing,STP,Sub-Saharan Africa
 Sark,,,Developed,,Northern Europe
 Saudi Arabia,Riyadh,AS,Developing,KSA,Western Asia
 Senegal,Dakar,AF,Developing,SEN,Sub-Saharan Africa
@@ -209,7 +209,7 @@ South Georgia and the South Sandwich Islands,Grytviken,AN,Developing,,Latin Amer
 South Sudan,Juba,AF,Developing,,Sub-Saharan Africa
 Spain,Madrid,EU,Developed,ESP,Southern Europe
 Sri Lanka,Colombo,AS,Developing,SRI,Southern Asia
-State of Palestine,East Jerusalem,AS,Developing,PLE,Western Asia
+Palestine,East Jerusalem,AS,Developing,PLE,Western Asia
 Sudan,Khartoum,AF,Developing,SUD,Northern Africa
 Suriname,Paramaribo,SA,Developing,SUR,Latin America and the Caribbean
 Svalbard and Jan Mayen Islands,Longyearbyen,EU,Developed,,Northern Europe
@@ -219,7 +219,7 @@ Switzerland,Bern,EU,Developed,SUI,Western Europe
 Syrian Arab Republic,Damascus,AS,Developing,SYR,Western Asia
 Tajikistan,Dushanbe,AS,Developing,TJK,Central Asia
 Thailand,Bangkok,AS,Developing,THA,South-eastern Asia
-The former Yugoslav Republic of Macedonia,Skopje,EU,Developed,MKD,Southern Europe
+FYR Macedonia,Skopje,EU,Developed,MKD,Southern Europe
 Timor-Leste,Dili,OC,Developing,TLS,South-eastern Asia
 Togo,Lome,AF,Developing,TOG,Sub-Saharan Africa
 Tokelau,,OC,Developing,TKL,Polynesia
@@ -233,7 +233,7 @@ Tuvalu,Funafuti,OC,Developing,TUV,Polynesia
 Uganda,Kampala,AF,Developing,UGA,Sub-Saharan Africa
 Ukraine,Kiev,EU,Developed,UKR,Eastern Europe
 United Arab Emirates,Abu Dhabi,AS,Developing,UAE,Western Asia
-United Kingdom of Great Britain and Northern Ireland,London,EU,Developed,"ENG,NIR,SCO,WAL",Northern Europe
+England,London,EU,Developed,ENG,Northern Europe
 United Republic of Tanzania,Dodoma,AF,Developing,TAN,Sub-Saharan Africa
 United States Minor Outlying Islands,,OC,Developing,,Micronesia
 United States Virgin Islands,Charlotte Amalie,NA,Developing,VIR,Latin America and the Caribbean
@@ -249,3 +249,6 @@ Yemen,Sanaa,AS,Developing,YEM,Western Asia
 Zambia,Lusaka,AF,Developing,ZAM,Sub-Saharan Africa
 Zimbabwe,Harare,AF,Developing,ZIM,Sub-Saharan Africa
 Ã…land Islands,Mariehamn,EU,Developed,ALD,Northern Europe
+Kosovo,Pristina,EU,Developing,RKS,Southern Europe
+Northern Ireland,Belfast,EU,Developed,NIR,Northern Europe
+Scotland,Edinburgh,EU,Developed,SCT,Northern Europe
