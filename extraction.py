@@ -1,6 +1,6 @@
 import pandas as pd
 
-personal_data = pd.read_csv('PlayerPersonalData.csv')
+personal_data = pd.read_csv('PersonalData.csv')
 #print (personal_data)
 attribute_data = pd.read_csv('PlayerAttributeData.csv')
 #print (attribute_data)
