@@ -1,0 +1,32 @@
+Player
+Player_ID, Name, Age, Overall, NTC (Nationality Code)
+
+Plays_In
+Player_ID, Club_ID
+
+Club
+Club_ID, Club_Name, Owner?, Net Worth, NTC
+
+Country
+NTC, country_name, capital, developed/developing, sub_region
+
+Attack:
+Player_ID, CF, LF, LS, LW, RF, RS, RW, ST
+
+Midfield:
+Player_ID, CAM, CDM, CM, LAM, LCM, LDM, LM, RAM, RCM, RDM, RM
+
+Defense:
+Player_ID, CB, LB, LCB, LWB, RB, RCB, RWB
+
+Goalkeeper:
+Player_ID, GK
+
+Position:
+(All positions as key), (Names of positions)
+
+Preferred_position
+Player_ID, (preferred position)
+
+Value
+Player_ID, value, wage
