@@ -23,7 +23,7 @@ for i in range(personal_total_rows):
         if personal_data["Nationality"][i] == key:
             temp = value
     player_file.write("INSERT into Player values (" + str(personal_data["ID"][i]) + ", " + '"'
-                      + str(personal_data["Name"][i]) + '"' + ", " + '"' + str(personal_data["Age"][i]) + '"' + ", "
-                      + str(personal_data["Overall"][i]) + ", " + '"' + temp + ");\n")
+                      + str(personal_data["Name"][i]) + '"' + ", " + str(personal_data["Age"][i]) + ", "
+                      + str(personal_data["Overall"][i]) + ", " + '"' + temp + '"' + ");\n")
 
 player_file.close()
