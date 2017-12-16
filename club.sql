@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS Club; 
-CREATE TABLE Club (Club_id INT, Club_name VARCHAR(20));
+CREATE TABLE Club (Club_id INT, Club_name VARCHAR(40));
 
 INSERT into Club values (0, "");
 INSERT into Club values (1, "FC St. Gallen");

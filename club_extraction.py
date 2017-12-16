@@ -28,7 +28,7 @@ club = list(myset)
 
 club_file = open('club.sql', 'w')
 
-club_file.write("DROP TABLE IF EXISTS Club; \nCREATE TABLE Club (Club_id INT, Club_name VARCHAR(20));\n\n")
+club_file.write("DROP TABLE IF EXISTS Club; \nCREATE TABLE Club (Club_id INT, Club_name VARCHAR(40));\n\n")
 for i in range(len(club)):
     club_file.write("INSERT into Club values (" + str(i) + ", " + '"' + str(club[i]) + '"' + ");\n")
 
