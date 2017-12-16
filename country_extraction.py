@@ -1,7 +1,7 @@
 import pandas as pd
 import collections
 
-country_data = pd.read_csv('country.csv')
+country_data = pd.read_csv('country.csv', keep_default_na=False)
 
 country_total_rows = country_data.shape[0]
 country_file = open('country.sql', 'w')
