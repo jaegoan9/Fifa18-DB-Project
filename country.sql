@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS Country; 
-CREATE TABLE Country (NTC VARCHAR(3), Country_Name VARCHAR(20), Capital VARCHAR(20), Continent VARCHAR(2), Developed/Developing VARCHAR(20), Sub_region VARCHAR(35));
+CREATE TABLE Country (NTC VARCHAR(3), Country_Name VARCHAR(20), Capital VARCHAR(20), Continent VARCHAR(2), Development VARCHAR(20), Sub_region VARCHAR(35));
 
 INSERT into Country values ("AFG", "Afghanistan", "Kabul", "AS", "Developing", "Southern Asia");
 INSERT into Country values ("ALB", "Albania", "Tirana", "EU", "Developed", "Southern Europe");
