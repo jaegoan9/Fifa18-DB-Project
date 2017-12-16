@@ -1,4 +1,4 @@
-Drop TABLE IF EXTSTS Positions;
+DROP TABLE IF EXISTS Positions;
 CREATE TABLE Positions (Position_Abv VARCHAR(4), Position_Name VARCHAR(25));
 INSERT INTO Positions values ("CAM", "Center_Attacking_Midfield");
 INSERT INTO Positions values ("CB", "Center_Back");
