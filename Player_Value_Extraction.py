@@ -1,6 +1,6 @@
 import pandas as pd
 
-personal_data = pd.read_csv('PersonalData.csv')
+personal_data = pd.read_csv('PlayerPersonalData.csv')
 
 total_rows = personal_data.shape[0]
 
