@@ -5,7 +5,7 @@ Plays_In
 Player_ID, Club_ID
 
 Club
-Club_ID, Club_Name, Owner?, Net Worth, NTC
+Club_ID, Club_Name
 
 Country
 NTC, country_name, capital, developed/developing, sub_region
@@ -18,9 +18,6 @@ Player_ID, CAM, CDM, CM, LAM, LCM, LDM, LM, RAM, RCM, RDM, RM
 
 Defense:
 Player_ID, CB, LB, LCB, LWB, RB, RCB, RWB
-
-Goalkeeper:
-Player_ID, GK
 
 Position:
 (All positions as key), (Names of positions)
