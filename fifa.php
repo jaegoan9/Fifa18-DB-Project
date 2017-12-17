@@ -4,38 +4,6 @@
     <style>
     * {box-sizing: border-box}
 
-    #myInput {
-      background-image: url('/css/searchicon.png');
-      background-position: 10px 12px;
-      background-repeat: no-repeat;
-      width: 100%;
-      font-size: 16px;
-      padding: 12px 20px 12px 40px;
-      border: 1px solid #ddd;
-      margin-bottom: 12px;
-    }
-
-    #myUL {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    #myUL li a {
-      border: 1px solid #ddd;
-      margin-top: -1px; /* Prevent double borders */
-      background-color: #f6f6f6;
-      padding: 12px;
-      text-decoration: none;
-      font-size: 18px;
-      color: black;
-      display: block
-    }
-
-    #myUL li a:hover:not(.header) {
-      background-color: #eee;
-    }
-
     /* Set height of body and the document to 100% */
     body, html {
         height: 100%;
@@ -91,32 +59,163 @@
       $conn -> set_charset('utf8');
           $result = $conn->query("select NTC, Country_Name from Country");
 
-          echo "<html>";
+          echo "<!DOCTYPE html>";
+	  echo "<html>";
+          echo "<head>";
+	  echo "<style>";
+          echo '* {
+                  box-sizing: border-box;
+                }
+
+                #myInput {
+                  background-position: 10px 12px;
+		  background-repeat: no-repeat;
+                  width: 100%;
+                  font-size: 16px;
+                  padding: 12px 20px 12px 30px;
+		  border: 1px solid #ddd;
+                  margin-top: 40px;
+                  margin-bottom: 12px;
+                }
+
+                #myUL {
+                  list-style-type: none;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                #myUL li a {
+                  border: 1px solid #ddd;
+                  margin-top: -1px; /* Prevent double borders */
+                  background-color: #f6f6f6;
+                  padding: 12px;
+                  text-decoration: none;
+                  font-size: 18px;
+                  color: black;
+                  display: block
+                }
+
+                #myUL li a:hover:not(.header) {
+                  background-color: #eee;
+		}
+
+                label {
+                    padding: 12px 12px 12px 15px;
+		    display: inline-block;
+                    color: #FF5733;
+		    font-size: 20px;
+                    font-family: Verdana;
+		}
+
+                .container {
+                    border-radius: 5px;
+                    background-color: #f2f2f2;
+                    padding: 20px;
+		}
+
+                .col-25 {
+                    float: left;
+                    width: 25%;
+                    margin-top: 6px;
+                }
+
+                .col-75 {
+                    float: left;
+                    width: 75%;
+                    margin-top: 6px;
+		}
+
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+		}
+
+		input[type=submit]:hover {
+                    background-color: #45a049;
+                }
+
+                input[type=submit] {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+		    float: right;
+                    margin-top: 30px;
+		}
+
+                input[type=text], select, textarea{
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    resize: vertical;
+                }';
+
+	  echo "</style>";
+          echo "</head>";
 	  echo "<body>";
           echo "<h1>View Players by Nationality</h1>";
-          echo "<form action='fifa.php' method=\"POST\">";
+	  echo '<div class="container">';
+	  echo "<form action='fifa.php' method=\"POST\">";
+          echo '<div class="row">
+                <div class="col-25">
+                  <label for="country">Country</label>
+                </div>
+                <div class="col-75">';
 	  echo "<select name=\"table\">";
-          while ($row = $result->fetch_assoc()) {
+	  while ($row = $result->fetch_assoc()) {
                         unset($name);
                         $name = $row['Country_Name'];
                         $id = $row['NTC'];
                         echo '<option value="'.$id.'">'.$name.'</option>';
           }
-          echo "</select> </br>";
-          echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" />";
+          echo "</select>";
+	  echo '</div>';
+	  echo '</div>';
+	  echo '<div class="row">';
+	  echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" />";
+	  echo '</div>';
           echo "</form>";
-
 	  $selected_key = $_POST['table'];
-          echo ($selected_key);
-          echo "</br>";
+          echo '<label for="ntc">'.$selected_key.'</label>'; 
+          echo "</div>";
 
           $sql="SELECT * FROM Player WHERE '$selected_key'=NTC";
 	  $result=mysqli_query($conn, $sql);
+
+          echo '<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..." title="Type in a name">';
+
+
+	  echo '<ul id="myUL">';
 	  while($row=mysqli_fetch_array($result)) {
-            echo $row['Name'];
-            echo "</br>";
-          }
-          echo "</ul>";
+              $tmp = $row['Name'];
+              echo '<li><a href="#">'.$tmp.'</a></li>';
+	  }
+  
+	  echo '</ul>';
+
+          echo "<script>";
+          echo 'function myFunction() {
+		    var input, filter, ul, li, a, i;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("myUL");
+                    li = ul.getElementsByTagName("li");
+                    for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("a")[0];
+                        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        } 
+                    }
+		}';		  
+          echo "</script>";
+          echo "</div>";		  
           echo "</body>";
           echo "</html>";
       ?> 
@@ -132,21 +231,28 @@
 
           echo "<html>";
           echo "<body>";
-          echo "<h1>Show Player Stats</h1>";
+	  echo "<h1>Show Player Stats</h1>";
+	  echo '<div class="container">';
           echo "<form action='stats.php' method=\"POST\">";
+          echo '<div class="row">
+                <div class="col-25">
+                  <label for="player">Player</label>
+                </div>
+                <div class="col-75">';
 	  echo "<select name=\"table\">";
           echo "<option value=\"$value\">$value</option>";
           while ($row = $result->fetch_assoc()) {
-
                         unset($name);
                         $name = $row['Name'];
                         $id = $row['Player_id'];
                         echo '<option value="'.$id.'">'.$name.'</option>';
-
           }
           echo "</select> </br>";
           echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" />";
-          echo "</form>";
+	  echo '</div>';
+	  echo '</div>';
+          echo '</div>';
+	  echo "</form>";
           $selected_key = $_POST['table'];
 
           #Steps for obtaining Player's attack stats
@@ -165,7 +271,7 @@
             $RW = $row["RW"];
             $ST = $row["ST"];
             printf("<tr><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td></tr><br>", $CF, $LF, $LS, $LW, $RF,$RS, $RW, $ST);
-          }
+	  }
 
           #Steps for obtaining Player's Defense stats
           $sql="SELECT CB, LB, LCB, LWB, RB, RCB, RWB FROM Defense WHERE '$selected_key'=Player_id";
@@ -237,22 +343,6 @@ function openPage(pageName,elmnt,color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-function myFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-
-        }
-    }
-}
 </script>
 </body>
 </html>
