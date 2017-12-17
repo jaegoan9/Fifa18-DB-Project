@@ -2,7 +2,7 @@ import pandas as pd
 
 #reading in raw data through pandas read_csv command
 playing_pos_data = pd.read_csv('PlayerPlayingPositionData.csv')
-print(playing_pos_data)
+#print(playing_pos_data)
 
 #extract total number of rows for iteration
 total_rows = playing_pos_data.shape[0]
