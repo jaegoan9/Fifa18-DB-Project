@@ -47,8 +47,8 @@
 <body>
 
 <button class="tablink" onclick="openPage('Home', this, 'red')">List by Country</button>
-<button class="tablink" onclick="openPage('News', this, 'green')"id="defaultOpen">Search Player</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">List by Clubs</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">Search Player</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')"id="defaultOpen">List by Clubs</button>
 <button class="tablink" onclick="openPage('About', this, 'orange')">Player Attribute</button>
 
 <div id="Home" class="tabcontent">
@@ -260,15 +260,9 @@
 	  echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" />";
 	  echo '</div>';
 	  echo '</div>';
-	  $selected_key = $_POST['table'];
-          $namesql="SELECT Name FROM Player WHERE Player_id = '$selected_key'";
-	  $nameresult=mysqli_query($conn, $namesql);
-	  $namerow=mysqli_fetch_array($nameresult);
-	  echo '<label for="name">'.$namerow['Name'].'</label>';
-
 	  echo '</div>';
 	  echo "</form>";
-//          $selected_key = $_POST['table'];
+          $selected_key = $_POST['table'];
 
 
           #Steps for obtaining Player's attack stats
@@ -368,10 +362,13 @@
           $namesql="SELECT Club_Name FROM Club WHERE Club_id = '$selected_key'";
 	  $nameresult=mysqli_query($conn, $namesql);
 	  $namerow=mysqli_fetch_array($nameresult);
+	  if ($namerow['Club_Name'] == "") {
+              echo '<label for="name">Have No Team</label>';
+	  }
 	  echo '<label for="name">'.$namerow['Club_Name'].'</label>';
  	  echo '</div>';
 	  echo "</form>";
-/*
+
 	  $sql="SELECT Player.Name FROM Player, Plays_in, Club WHERE Player.Player_id=Plays_in.Player_id 
 		  AND Plays_in.Club_id=Club.Club_id AND '$selected_key'=Club.Club_id";
 	  $result=mysqli_query($conn, $sql);
@@ -380,7 +377,7 @@
               $tmp = $row['Name'];
               echo '<li><a href="#">'.$tmp.'</a></li>';
 	  }
- */
+
           echo "</body>";
           echo "</html>";
 
@@ -462,7 +459,7 @@
 	  echo "<td>Heading_accuracy</td>";
 
 	  echo "</tr>\n";
-/*
+
 	  while($row=mysqli_fetch_array($result)) {
               echo "<tr>";
 	      printf("<td>%d</td>", $row["Acceleration"]);
@@ -484,7 +481,7 @@
 	      printf("<td>%d</td>", $row["Heading_accuracy"]);
 	      echo "</tr>\n";
 	  }
- */
+
 	  $result=mysqli_query($conn, $sql);
 	  echo "</table>\n";
           echo "<table bgcolor=\"#C70039\" border=\"1px solid black\">";
@@ -507,7 +504,7 @@
 	  echo "<td>Vision</td>";
 	  echo "<td>Volleys</td>";
 	  echo "</tr>\n";
-/*
+
 	  while($row=mysqli_fetch_array($result)) {
               echo "<tr>";
 	      printf("<td>%d</td>", $row["Interceptions"]);
@@ -529,12 +526,12 @@
 	      printf("<td>%d</td>", $row["Volleys"]);
 	      echo "</tr>\n";
 	  }
-          echo "</table>\n";
- */
-	  echo "</body>";
+  
+	  echo "</table>\n";
+          echo "</body>";
           echo "</html>";
 
-      ?>
+      ?> 
 </div>
 
 <script>

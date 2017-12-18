@@ -47,9 +47,9 @@
 <body>
 
 <button class="tablink" onclick="openPage('Home', this, 'red')">List by Country</button>
-<button class="tablink" onclick="openPage('News', this, 'green')"id="defaultOpen">Search Player</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">Search Player</button>
 <button class="tablink" onclick="openPage('Contact', this, 'blue')">List by Clubs</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">Player Attribute</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')"id="defaultOpen">Player Attribute</button>
 
 <div id="Home" class="tabcontent">
       <?php
@@ -161,7 +161,7 @@
 	  echo "</style>";
           echo "</head>";
 	  echo "<body>";
-          echo "<h1>View Players by Nationality</h1>";
+	  echo "<h1>View Players by Nationality</h1>";
 	  echo '<div class="container">';
 	  echo "<form action='fifa.php' method=\"POST\">";
           echo '<div class="row">
@@ -260,15 +260,9 @@
 	  echo "<input type=\"submit\" name=\"submit\" value=\"Submit\" />";
 	  echo '</div>';
 	  echo '</div>';
-	  $selected_key = $_POST['table'];
-          $namesql="SELECT Name FROM Player WHERE Player_id = '$selected_key'";
-	  $nameresult=mysqli_query($conn, $namesql);
-	  $namerow=mysqli_fetch_array($nameresult);
-	  echo '<label for="name">'.$namerow['Name'].'</label>';
-
 	  echo '</div>';
 	  echo "</form>";
-//          $selected_key = $_POST['table'];
+          $selected_key = $_POST['table'];
 
 
           #Steps for obtaining Player's attack stats
@@ -286,7 +280,7 @@
             $RS = $row["RS"];
             $RW = $row["RW"];
             $ST = $row["ST"];
-            printf("<tr><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td></tr><br>", $CF, $LF, $LS, $LW, $RF,$RS, $RW, $ST);
+          //  printf("<tr><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td></tr><br>", $CF, $LF, $LS, $LW, $RF,$RS, $RW, $ST);
 	  }
 	  echo "</table>";
 	  
@@ -304,7 +298,7 @@
             $RB = $row["RB"];
             $RCB = $row["RCB"];
             $RWB = $row["RWB"];
-            printf("<tr><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td></tr><br>", $CB, $LB, $LCB, $LWB, $RB,$RCB, $RWB);
+           // printf("<tr><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td></tr><br>", $CB, $LB, $LCB, $LWB, $RB,$RCB, $RWB);
 	  }
           echo "</table>";
 
@@ -326,7 +320,7 @@
             $RCM = $row["RCM"];
             $RDM = $row["RDM"];
             $RM = $row["RM"];
-            printf("<tr><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td></tr><br>", $CAM, $CDM, $CM, $LAM, $LCM, $LDM, $LM, $RAM, $RCM, $RDM, $RM);
+           // printf("<tr><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td><td>%d</td></tr><br>", $CAM, $CDM, $CM, $LAM, $LCM, $LDM, $LM, $RAM, $RCM, $RDM, $RM);
 	  }
 	  echo "</table>";
 	  echo "</body>";
@@ -462,7 +456,7 @@
 	  echo "<td>Heading_accuracy</td>";
 
 	  echo "</tr>\n";
-/*
+
 	  while($row=mysqli_fetch_array($result)) {
               echo "<tr>";
 	      printf("<td>%d</td>", $row["Acceleration"]);
@@ -484,7 +478,7 @@
 	      printf("<td>%d</td>", $row["Heading_accuracy"]);
 	      echo "</tr>\n";
 	  }
- */
+
 	  $result=mysqli_query($conn, $sql);
 	  echo "</table>\n";
           echo "<table bgcolor=\"#C70039\" border=\"1px solid black\">";
@@ -507,7 +501,7 @@
 	  echo "<td>Vision</td>";
 	  echo "<td>Volleys</td>";
 	  echo "</tr>\n";
-/*
+
 	  while($row=mysqli_fetch_array($result)) {
               echo "<tr>";
 	      printf("<td>%d</td>", $row["Interceptions"]);
@@ -530,11 +524,10 @@
 	      echo "</tr>\n";
 	  }
           echo "</table>\n";
- */
-	  echo "</body>";
+          echo "</body>";
           echo "</html>";
 
-      ?>
+      ?> 
 </div>
 
 <script>
